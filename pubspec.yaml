@@ -1,0 +1,25 @@
+name: musicapp
+description: "Sean todos bienvenidos a musicapp donde tu puedes crear guardar y escuchar tu propio genero o musica favorita."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: ^3.8.0-278.1.beta
+
+dependencies:
+  flutter:
+    sdk: flutter
+  http: ^1.5.0
+  just_audio: ^0.9.24
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  
+
+flutter:
+  uses-material-design: true
+  assets: 
+  - assets/img/
+  - assets/songs/
