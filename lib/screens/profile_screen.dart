@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:musicapp/screens/song_list_screen.dart';
 import 'package:musicapp/screens/weather_screen.dart';
+import 'package:musicapp/screens/favorites_screen.dart';
+import 'package:musicapp/screens/calendario.dart';
 import 'package:musicapp/widgets/background_scaffold.dart';
 
 // 🔹 Bio en varias líneas
@@ -29,6 +31,8 @@ class _ProfileScreenState extends State<ProfileScreen>
             style: TextStyle(fontSize: 22, color: Colors.white))),
     ProfileCard(),
     SongListScreen(),
+    FavoritesScreen(),
+    CalendarioScreen(),
   ];
 
   void _onItemTapped(int index) {
@@ -104,6 +108,8 @@ class ProfileBottomBar extends StatelessWidget {
             _buildNavItem(Icons.account_box, 0, selectedIndex, onItemTapped),
             _buildNavItem(Icons.home, 1, selectedIndex, onItemTapped),
             _buildNavItem(Icons.music_note, 2, selectedIndex, onItemTapped),
+            _buildNavItem(Icons.favorite, 3, selectedIndex, onItemTapped),
+            _buildNavItem(Icons.calendar_today, 4, selectedIndex, onItemTapped),
           ],
         ),
       ),

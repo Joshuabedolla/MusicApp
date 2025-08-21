@@ -38,7 +38,7 @@ class _SongListScreenState extends State<SongListScreen> {
     ),
     Song(
       title: 'Die for You',
-      artist: 'Calvin Harris',
+      artist: 'The Weeknd',
       path: 'assets/songs/Die For You(MP3_160K).mp3',
     ),
     Song(
@@ -69,7 +69,7 @@ class _SongListScreenState extends State<SongListScreen> {
     ),
     Song(
       title: 'KHE',
-      artist: 'Rauw Alejandro',
+      artist: 'Rauw Alejandro, Romeo Santos',
       path: 'assets/songs/raw_alejandro_romeo_santos_khe__mp3_14498.mp3',
     ),
     Song(
@@ -149,7 +149,7 @@ class _SongListScreenState extends State<SongListScreen> {
     ),
     Song(
       title: 'Baile Inolvidable',
-      artist: 'Feid',
+      artist: 'Bad Bunny',
       path: 'assets/songs/BAD BUNNY - BAILE INoLVIDABLE (Video Oficial) _ DeBÍ TiRAR MáS FOToS(MP3_160K).mp3',
     ),
     Song(
@@ -227,7 +227,26 @@ class _SongListScreenState extends State<SongListScreen> {
       artist: 'Bad Bunny',
       path: 'assets/songs/BAD BUNNY - HACIENDO QUE ME AMAS _ EL ÚLTIMO TOUR DEL MUNDO [Visualizer](MP3_160K).mp3',
     ),
- 
+    Song(
+      title: 'COMO SE SIENTE (REMIX)',
+      artist: 'Bad Bunny. Jhay Cortez',
+      path: 'assets/songs/BAD BUNNY x JHAY CORTEZ - CÓMO SE SIENTE REMIX _ LAS QUE NO IBAN A SALIR (Audio Oficial)(MP3_160K).mp3',
+    ),
+    Song(
+      title: 'Efecto',
+      artist: 'Bad Bunny',
+      path: 'assets/songs/Bad Bunny - Efecto (360° Visualizer) _ Un Verano Sin Ti(MP3_160K).mp3',
+    ),
+     Song(
+      title: 'Haciendo Que Me Amas',
+      artist: 'Bad Bunny',
+      path: 'assets/songs/BAD BUNNY - HACIENDO QUE ME AMAS _ EL ÚLTIMO TOUR DEL MUNDO [Visualizer](MP3_160K).mp3',
+    ),
+ Song(
+      title: 'RLNDT',
+      artist: 'Bad bunny',
+      path: 'assets/songs/BAD BUNNY - RLNDT _ X100PRE [Visualizer](MP3_160K) (1).mp3',
+    ),
   ];
 
    final AudioPlayer _audioPlayer = AudioPlayer();
