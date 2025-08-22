@@ -22,6 +22,7 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
     {"title": "Aquel Nap ZzZz", "image": "assets/img/Vicerversa.jpg"},
     {"title": "RLNDT", "image": "assets/img/X100pre.jpg"},
     {"title": "Otra Noche En Miami", "image": "assets/img/X100pre.jpg"},
+    {"title": "TURiSTA", "image": "assets/img/debi-tirar-mas-fotos.jpg"}
   ];
 
   final List<Map<String, String>> allArtists = [

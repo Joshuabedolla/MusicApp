@@ -247,6 +247,66 @@ class _SongListScreenState extends State<SongListScreen> {
       artist: 'Bad bunny',
       path: 'assets/songs/BAD BUNNY - RLNDT _ X100PRE [Visualizer](MP3_160K) (1).mp3',
     ),
+    Song(
+      title: '  ALAMBRE PuA',
+      artist: 'Bad Bunny',
+      path: 'assets/songs/BAD BUNNY - ALAMBRE PúA(MP3_160K).mp3',
+    ),
+    Song(
+      title: 'Turista',
+      artist: 'Bad Bunny',
+      path: 'assets/songs/BAD BUNNY - TURiSTA (Video Oficial) _ DeBÍ TiRAR MáS FOToS(MP3_160K).mp3',
+    ),
+     Song(
+      title: 'Igual Que Un Angel',
+      artist: 'Kali Uchis, Peso Pluma',
+      path: 'assets/songs/Kali Uchis - Igual Que Un Ángel (ft. Peso Pluma) [Official Audio](MP3_160K).mp3',
+    ),
+ Song(
+      title: 'Adivino',
+      artist: 'Myke Towers, Bad Bunny',
+      path: 'assets/songs/Myke Towers_ Bad Bunny - ADIVINO (Official Lyric Video)(MP3_160K).mp3',
+    ),
+    Song(
+      title: 'Tu Con El',
+      artist: 'Rauw Alejandro',
+      path: 'assets/songs/Rauw Alejandro - Tú Con Él (Lyric Video)(MP3_160K).mp3',
+    ),
+     Song(
+      title: 'Pensandote',
+      artist: 'Rauw Alejandro, Tainy',
+      path: 'assets/songs/Rauw Alejandro ft. Tainy _ Pensándote (Official Audio)(MP3_160K).mp3',
+    ),
+ Song(
+      title: 'BIEN LOCO',
+      artist: 'Wisin, Mora',
+      path: 'assets/songs/Wisin_ Mora - BIEN LOCO (Official Video)(MP3_160K) (1).mp3',
+    ),
+    Song(
+      title: 'SI TU SUPIERAS',
+      artist: 'Feid',
+      path: 'assets/songs/Feid - SI TÚ SUPIERAS (Official Video)(MP3_160K).mp3',
+    ),
+     Song(
+      title: 'PPCP',
+      artist: 'Feid, Sky Rompiendo',
+      path: 'assets/songs/Feid_ Sky Rompiendo - PPCP (Audio)(MP3_160K).mp3',
+    ),
+ Song(
+      title: 'CHORRITO PA LAS ANIMAS',
+      artist: 'Feid',
+      path: 'assets/songs/Feid - CHORRITO PA LAS ANIMAS (Official Video)(MP3_160K).mp3',
+    ),
+    Song(
+      title: 'DEJAME HABLAR',
+      artist: 'Wisin Y Yandel',
+      path: 'assets/songs/Dejame Hablar(MP3_160K).mp3',
+    ),
+     Song(
+      title: 'YO LO SE',
+      artist: 'Wisin Y Yandel',
+      path: 'assets/songs/Yo Lo Se(MP3_160K).mp3',
+    ),
   ];
 
    final AudioPlayer _audioPlayer = AudioPlayer();
