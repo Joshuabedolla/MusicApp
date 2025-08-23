@@ -5,6 +5,7 @@ import 'package:musicapp/screens/favorites_screen.dart';
 import 'package:musicapp/screens/calendario.dart';
 import 'package:musicapp/widgets/background_scaffold.dart';
 
+
 // 🔹 Bio en varias líneas
 const String profileBio = '''
 🎶 Amante de la música y la programación 🎧  

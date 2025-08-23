@@ -12,17 +12,19 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
   List<String> favoriteArtists = [];
 
   final List<Map<String, String>> allSongs = [
-    {"title": "KETU TeCRE", "image": "assets/img/debi-tirar-mas-fotos.jpg"},
-    {"title": "Museo", "image": "assets/img/trap-cake-vol.2-a8e91cd2.jpg"},
-    {"title": "Amar de Nuevo", "image": "assets/img/cosa-nuestra-342f0e18.jpg"},
-    {"title": "Mil Vidas", "image": "assets/img/Lo-mismo-de-siempre.jpg"},
-    {"title": "La Inocente", "image": "assets/img/Microdosis.jpg"},
-    {"title": "FERXOO 100", "image": "assets/img/FERXO100.jpg"},
+    {"title": "KETU TeCRE", "image": "assets/img/debi-tirar-mas-fotos.jpg", "audio": "assets/songs/08 Bad Bunny - KETU TeCRE.mp3"},
+    {"title": "Museo", "image": "assets/img/trap-cake-vol.2-a8e91cd2.jpg", "audio": "assets/songs/01-Rauw-Alejandro-Museo .mp3"},
+    {"title": "Amar de Nuevo", "image": "assets/img/cosa-nuestra-342f0e18.jpg", "audio": "assets/songs/Rauw Alejandro - Amar De Nuevo.mp3"},
+    {"title": "Mil Vidas", "image": "assets/img/Lo-mismo-de-siempre.jpg", "audio": "assets/songs/Mora ft Ryan Castro - Mil Vidas.mp3"},
+    {"title": "La Inocente", "image": "assets/img/Microdosis.jpg", "audio": "assets/songs/Mora Ft. Feid - La Inocente.mp3"},
+    {"title": "FERXOO 100", "image": "assets/img/FERXO100.jpg", "audio": "assets/songs/Feid - Ferxxo 100 (Official Video)(MP3_160K).mp3"},
     {"title": "Dejame Entrar", "image": "assets/img/cosa-nuestra-342f0e18.jpg"},
-    {"title": "Aquel Nap ZzZz", "image": "assets/img/Vicerversa.jpg"},
-    {"title": "RLNDT", "image": "assets/img/X100pre.jpg"},
-    {"title": "Otra Noche En Miami", "image": "assets/img/X100pre.jpg"},
-    {"title": "TURiSTA", "image": "assets/img/debi-tirar-mas-fotos.jpg"}
+    {"title": "Aquel Nap ZzZz", "image": "assets/img/Vicerversa.jpg", "audio": "assets/songs/06-Aquel Nap ZzZz.mp3"},
+    {"title": "RLNDT", "image": "assets/img/X100pre.jpg", "audio": "assets/songs/BAD BUNNY - RLNDT _ X100PRE [Visualizer](MP3_160K) (1).mp3"},
+    {"title": "Otra Noche En Miami", "image": "assets/img/X100pre.jpg", "audio": "assets/songs/06-Otra Noche En Miami.mp3"},
+    {"title": "Playa Privada", "image": "assets/img/Microdosis.jpg", "audio": "assets/songs/Mora_ ELENA ROSE - PLAYA PRIVADA (Visualizer) _ MICRODOSIS(MP3_160K).mp3"},
+    {"title": "Tu Con El", "image": "assets/img/cosa-nuestra-342f0e18.jpg", "audio": "assets/songs/Rauw Alejandro - Tú Con Él (Lyric Video)(MP3_160K).mp3"},
+    {"title": "TURiSTA", "image": "assets/img/debi-tirar-mas-fotos.jpg", "audio": "assets/songs/BAD BUNNY - TURiSTA (Video Oficial) _ DeBÍ TiRAR MáS FOToS(MP3_160K).mp3"}
   ];
 
   final List<Map<String, String>> allArtists = [
@@ -33,6 +35,10 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
     {"name": "Wisin y Yandel", "image": "assets/img/Wisin Y Yandel.png"},
     {"name": "The Weeknd", "image": "assets/img/The Weeknd.png"},
     {"name": "Eminem", "image": "assets/img/Eminem.jpg"},
+    {"name": "Reik", "image": "assets/img/Reik.png"},
+    {"name": "Myke Towers", "image": "assets/img/Myke Towers.jpg"},
+    {"name": "Imagine Dragons", "image": "assets/img/Imagine-Dragons.png"},
+    {"name": "Calvin Harris", "image": "assets/img/calvin-harris.jpg"},
   ];
 
   void toggleFavoriteSong(String song) {

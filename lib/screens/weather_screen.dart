@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import '../widgets/background_scaffold.dart'; // 👈 importar BackgroundScaffold
+import '../widgets/background_scaffold.dart'; // 👈 Fondo global
 
 class WeatherScreen extends StatefulWidget {
   const WeatherScreen({super.key});
@@ -44,7 +44,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
   Widget build(BuildContext context) {
     return BackgroundScaffold(
       appBar: AppBar(
-        title: const Text('Clima'),
+        title: const Text("Clima"),
         centerTitle: true,
         backgroundColor: Colors.deepPurple.withOpacity(0.85),
         elevation: 4,
@@ -56,11 +56,18 @@ class _WeatherScreenState extends State<WeatherScreen> {
         future: getWeather(),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
-            return const Center(child: CircularProgressIndicator());
+            return const Center(
+              child: CircularProgressIndicator(color: Colors.deepPurple),
+            );
           } else if (snapshot.hasError ||
               !snapshot.hasData ||
               !snapshot.data!.status) {
-            return const Center(child: Text('Error al obtener el clima'));
+            return const Center(
+              child: Text(
+                '❌ Error al obtener el clima',
+                style: TextStyle(fontSize: 18, color: Colors.redAccent),
+              ),
+            );
           } else {
             Weather weather = snapshot.data!.body!;
             return WeatherCard(weather: weather);
@@ -80,48 +87,91 @@ class WeatherCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Container(
-        width: 300,
+        width: 330,
         height: 500,
+        margin: const EdgeInsets.symmetric(vertical: 30, horizontal: 16),
+        padding: const EdgeInsets.all(24),
         decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(28),
           gradient: const LinearGradient(
-            colors: [Colors.purple, Colors.deepPurple],
+            colors: [Color(0xFF8E2DE2), Color(0xFF4A00E0)],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
           ),
-          borderRadius: BorderRadius.circular(20),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.25),
+              blurRadius: 12,
+              offset: const Offset(0, 6),
+            ),
+          ],
         ),
-        margin: const EdgeInsets.symmetric(vertical: 20),
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
-        child: DefaultTextStyle(
-          style: const TextStyle(color: Colors.white),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                'El clima en ${weather.city}',
-                style: const TextStyle(fontSize: 30, fontWeight: FontWeight.w300),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            // Ciudad
+            Text(
+              weather.city,
+              style: const TextStyle(
+                fontSize: 32,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+                letterSpacing: 1.2,
               ),
-              Text('${weather.temp}°', style: const TextStyle(fontSize: 90)),
-              const SizedBox(height: 10),
-              Image.network(
-                'https:${weather.icon}',
-                width: 64,
-                height: 64,
-                fit: BoxFit.contain,
+            ),
+            const SizedBox(height: 12),
+
+            // Temperatura
+            Text(
+              "${weather.temp}°C",
+              style: const TextStyle(
+                fontSize: 90,
+                fontWeight: FontWeight.w300,
+                color: Colors.white,
               ),
-              const SizedBox(height: 10),
-              Text(
-                weather.condition,
-                style: const TextStyle(fontSize: 30, fontWeight: FontWeight.w200),
+            ),
+            const SizedBox(height: 10),
+
+            // Icono del clima
+            Image.network(
+              "https:${weather.icon}",
+              width: 90,
+              height: 90,
+              fit: BoxFit.contain,
+            ),
+            const SizedBox(height: 14),
+
+            // Condición
+            Text(
+              weather.condition,
+              style: const TextStyle(
+                fontSize: 26,
+                fontWeight: FontWeight.w400,
+                color: Colors.white70,
               ),
-            ],
-          ),
+              textAlign: TextAlign.center,
+            ),
+
+            const Spacer(),
+
+            // Footer con branding
+            const Text(
+              "WeatherAPI • Actualizado en tiempo real",
+              style: TextStyle(
+                fontSize: 14,
+                color: Colors.white54,
+                fontStyle: FontStyle.italic,
+              ),
+              textAlign: TextAlign.center,
+            ),
+          ],
         ),
       ),
     );
   }
 }
 
+// 📌 Modelos
 class Weather {
   final String city;
   final String temp;
